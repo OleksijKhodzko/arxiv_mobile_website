@@ -119,8 +119,8 @@ We may update this Privacy Policy periodically. We will notify you of significan
 
 For questions about this Privacy Policy or your data:
 
-**Email**: privacy@arxivmobile.com
-**Support**: support@arxivmobile.com
+**Email**: olekshodzko@gmail.com
+**Support**: olekshodzko@gmail.com
 
 ## Consent
 
