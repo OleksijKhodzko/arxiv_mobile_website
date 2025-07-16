@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Instructions - arXiv Mobile</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1><a href="./index.html">arXiv Mobile</a></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="./index.html#about">About</a></li>
+                <li><a href="./index.html#features">Features</a></li>
+                <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="./testing-instructions.html">Testing Instructions</a></li>
+                <li><a href="./legal-considerations.html">Legal</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Testing Instructions for Google Play Review</h1>
+            
+            <section>
+                <h2>App Overview</h2>
+                <p>arXiv Mobile is a Flutter-based application that provides enhanced access to scientific papers from arXiv.org. The app offers free PDF viewing and optional paid PDF-to-HTML conversion services.</p>
+            </section>
+
+            <section>
+                <h2>Key Features to Test</h2>
+                
+                <h3>1. Paper Search and Browsing</h3>
+                <ul>
+                    <li>Search for papers using keywords, authors, or arXiv IDs</li>
+                    <li>Browse recent papers by category</li>
+                    <li>View paper abstracts and metadata</li>
+                </ul>
+
+                <h3>2. PDF Viewing (Free)</h3>
+                <ul>
+                    <li>Tap any paper to view the original PDF</li>
+                    <li>Full-screen reading experience</li>
+                    <li>Pinch-to-zoom and pan gestures</li>
+                    <li>Offline caching for previously viewed papers</li>
+                </ul>
+
+                <h3>3. User Authentication</h3>
+                <ul>
+                    <li>Create account with email/password</li>
+                    <li>Sign in/out functionality</li>
+                    <li>Password reset option</li>
+                </ul>
+
+                <h3>4. Saved Articles</h3>
+                <ul>
+                    <li>Save papers to your reading list</li>
+                    <li>Access saved papers from the main menu</li>
+                    <li>Cross-device synchronization</li>
+                    <li>Pull-to-refresh for manual sync</li>
+                </ul>
+
+                <h3>5. PDF-to-HTML Conversion (Paid Feature)</h3>
+                <ul>
+                    <li>Tap "Convert to HTML" on any paper</li>
+                    <li>Payment dialog appears (30 cents per conversion)</li>
+                    <li>Process payment through RevenueCat</li>
+                    <li>View converted HTML with improved mobile formatting</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Testing Scenarios</h2>
+                
+                <h3>Scenario 1: First-Time User Experience</h3>
+                <ol>
+                    <li>Install and open the app</li>
+                    <li>Browse papers without creating an account</li>
+                    <li>View a PDF paper (should work without account)</li>
+                    <li>Try to save a paper (should prompt for account creation)</li>
+                    <li>Create an account and verify email functionality</li>
+                </ol>
+
+                <h3>Scenario 2: Core Functionality</h3>
+                <ol>
+                    <li>Search for a specific paper (e.g., "quantum computing")</li>
+                    <li>Open a paper and view it in PDF format</li>
+                    <li>Save the paper to your reading list</li>
+                    <li>Navigate to saved articles and verify the paper is there</li>
+                    <li>Test offline access by disabling internet and reopening a cached paper</li>
+                </ol>
+
+                <h3>Scenario 3: Premium Features</h3>
+                <ol>
+                    <li>Select a paper and tap "Convert to HTML"</li>
+                    <li>Review the payment dialog (30 cents)</li>
+                    <li>Complete the purchase through RevenueCat</li>
+                    <li>Verify the HTML conversion appears with improved formatting</li>
+                    <li>Check that the conversion is cached for future access</li>
+                </ol>
+
+                <h3>Scenario 4: Settings and Privacy</h3>
+                <ol>
+                    <li>Navigate to Settings page</li>
+                    <li>Review PDF cache settings (size limit, expiration)</li>
+                    <li>Test cache clearing functionality</li>
+                    <li>Verify privacy controls and data deletion options</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Test Accounts</h2>
+                <p>For testing purposes, you can create any email account. The app uses Firebase Authentication, so standard email/password combinations work.</p>
+                
+                <h3>Sample Test Account</h3>
+                <ul>
+                    <li><strong>Email:</strong> test@example.com</li>
+                    <li><strong>Password:</strong> TestPass123</li>
+                </ul>
+                
+                <p><em>Note: This is a sample account for testing. Please create your own test account during review.</em></p>
+            </section>
+
+            <section>
+                <h2>Payment Testing</h2>
+                <p>The app uses RevenueCat for payment processing. For testing:</p>
+                <ul>
+                    <li>Use RevenueCat's test payment methods</li>
+                    <li>Test cards will not be charged</li>
+                    <li>Conversion service is 30 cents per PDF</li>
+                    <li>Payment receipts are handled by RevenueCat</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Expected Behavior</h2>
+                
+                <h3>Free Features</h3>
+                <ul>
+                    <li>All arXiv papers accessible in PDF format</li>
+                    <li>No limits on paper viewing or downloading</li>
+                    <li>Offline caching works without payment</li>
+                    <li>Account creation and saved articles are free</li>
+                </ul>
+
+                <h3>Paid Features</h3>
+                <ul>
+                    <li>PDF-to-HTML conversion requires payment</li>
+                    <li>Each conversion costs 30 cents</li>
+                    <li>Converted papers are cached for future access</li>
+                    <li>No subscription required - pay-per-use model</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Technical Notes</h2>
+                <ul>
+                    <li><strong>Platform:</strong> Flutter (iOS and Android)</li>
+                    <li><strong>Backend:</strong> Firebase (Authentication, Storage, Firestore)</li>
+                    <li><strong>Payment:</strong> RevenueCat integration</li>
+                    <li><strong>Conversion:</strong> Mathpix API for PDF-to-HTML</li>
+                    <li><strong>Data Source:</strong> arXiv.org public API</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Privacy and Data Handling</h2>
+                <ul>
+                    <li>User data is stored securely in Firebase</li>
+                    <li>PDF content is cached locally for performance</li>
+                    <li>No personal information is shared with third parties</li>
+                    <li>Users can delete their accounts and data at any time</li>
+                    <li>See our <a href="./privacy-policy.html">Privacy Policy</a> for details</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Support and Feedback</h2>
+                <p>For questions during testing or technical issues:</p>
+                <ul>
+                    <li><strong>Email:</strong> support@arxivmobile.com</li>
+                    <li><strong>Website:</strong> https://arxivmobile.github.io</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 arXiv Mobile. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="./privacy-policy.html">Privacy Policy</a>
+                <a href="./legal-considerations.html">Legal</a>
+                <a href="./testing-instructions.html">Testing</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
