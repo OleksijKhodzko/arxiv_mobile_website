@@ -67,8 +67,9 @@
                 <h3>5. PDF-to-HTML Conversion (Paid Feature)</h3>
                 <ul>
                     <li>Tap "Convert to HTML" on any paper</li>
-                    <li>Payment dialog appears (30 cents per conversion)</li>
-                    <li>Process payment through RevenueCat</li>
+                    <li>System analyzes PDF and detects page count</li>
+                    <li>Payment dialog shows per-page pricing ($0.015 per page)</li>
+                    <li>Process payment through Google Play In-App Purchase</li>
                     <li>View converted HTML with improved mobile formatting</li>
                 </ul>
             </section>
@@ -97,8 +98,9 @@
                 <h3>Scenario 3: Premium Features</h3>
                 <ol>
                     <li>Select a paper and tap "Convert to HTML"</li>
-                    <li>Review the payment dialog (30 cents)</li>
-                    <li>Complete the purchase through RevenueCat</li>
+                    <li>Wait for page count detection and price calculation</li>
+                    <li>Review the payment dialog showing per-page pricing</li>
+                    <li>Complete the purchase through Google Play In-App Purchase</li>
                     <li>Verify the HTML conversion appears with improved formatting</li>
                     <li>Check that the conversion is cached for future access</li>
                 </ol>
@@ -127,12 +129,13 @@
 
             <section>
                 <h2>Payment Testing</h2>
-                <p>The app uses RevenueCat for payment processing. For testing:</p>
+                <p>The app uses Google Play In-App Purchase for payment processing. For testing:</p>
                 <ul>
-                    <li>Use RevenueCat's test payment methods</li>
-                    <li>Test cards will not be charged</li>
-                    <li>Conversion service is 30 cents per PDF</li>
-                    <li>Payment receipts are handled by RevenueCat</li>
+                    <li>Use Google Play Console test accounts</li>
+                    <li>Test purchases will not be charged</li>
+                    <li>Conversion service is $0.015 per page</li>
+                    <li>Page count is detected automatically</li>
+                    <li>Payment receipts are handled by Google Play</li>
                 </ul>
             </section>
 
@@ -150,7 +153,8 @@
                 <h3>Paid Features</h3>
                 <ul>
                     <li>PDF-to-HTML conversion requires payment</li>
-                    <li>Each conversion costs 30 cents</li>
+                    <li>Each conversion costs $0.015 per page</li>
+                    <li>Page count is detected automatically</li>
                     <li>Converted papers are cached for future access</li>
                     <li>No subscription required - pay-per-use model</li>
                 </ul>
@@ -161,7 +165,8 @@
                 <ul>
                     <li><strong>Platform:</strong> Flutter (iOS and Android)</li>
                     <li><strong>Backend:</strong> Firebase (Authentication, Storage, Firestore)</li>
-                    <li><strong>Payment:</strong> RevenueCat integration</li>
+                    <li><strong>Payment:</strong> Google Play In-App Purchase</li>
+                    <li><strong>Page Detection:</strong> PDF parsing for page count</li>
                     <li><strong>Conversion:</strong> Mathpix API for PDF-to-HTML</li>
                     <li><strong>Data Source:</strong> arXiv.org public API</li>
                 </ul>
