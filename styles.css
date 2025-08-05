@@ -93,6 +93,7 @@ nav {
     flex-wrap: wrap;
 }
 
+.web-app-badge,
 .app-store-badge,
 .google-play-badge {
     display: inline-block;
@@ -107,10 +108,21 @@ nav {
     text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 }
 
+.web-app-badge {
+    background: rgba(103, 126, 234, 0.8);
+    border: 1px solid rgba(103, 126, 234, 0.6);
+}
+
+.web-app-badge:hover,
 .app-store-badge:hover,
 .google-play-badge:hover {
     background: rgba(255,255,255,0.4);
     border: 1px solid rgba(255,255,255,0.5);
+}
+
+.web-app-badge:hover {
+    background: rgba(103, 126, 234, 1);
+    border: 1px solid rgba(103, 126, 234, 0.8);
 }
 
 /* Main Content */
