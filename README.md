@@ -1,10 +1,10 @@
-# Privacy Policy for ArXiv Mobile
+# Privacy Policy for Archive Papers
 
 **Last Updated:** July 15, 2025
 
 ## Overview
 
-ArXiv Mobile is a mobile application that provides access to ArXiv papers with PDF processing and conversion capabilities. This Privacy Policy explains how we collect, use, and protect your information when you use our app.
+Archive Papers is a mobile application that provides access to ArXiv papers with PDF processing and conversion capabilities. This Privacy Policy explains how we collect, use, and protect your information when you use our app.
 
 ## Information We Collect
 
@@ -124,4 +124,4 @@ For questions about this Privacy Policy or your data:
 
 ## Consent
 
-By using ArXiv Mobile, you consent to the collection and use of your information as described in this Privacy Policy.
+By using Archive Papers, you consent to the collection and use of your information as described in this Privacy Policy.
